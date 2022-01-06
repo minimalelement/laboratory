@@ -6,7 +6,7 @@
 <xs:element name="Faculty" maxOccurs="unbounded">
 <xs:complexType>
 <xs:sequence>
-<xs:element name="EMP_name" type="xs:string"></xs:element>
+<xs:element name="EMP_Name" type="xs:string"></xs:element>
 <xs:element name="EMP_experience" type="xs:string"></xs:element>
 <xs:element name="EMP_address" type="xs:string"></xs:element>
 <xs:element name="EMP_phone" type="xs:integer"></xs:element>
@@ -33,6 +33,29 @@
 </xs:sequence>
 </xs:complexType>
 </xs:element>
+<xs:element name="Test" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Test_type" type="xs:string"></xs:element>
+<xs:element name="Test_name" type="xs:string"></xs:element>
+<xs:element name="Test_id" type="xs:string"></xs:element>
+<xs:element name="Test_validity" type="xs:string"></xs:element>
+<xs:element name="Test_Price" type="myAge"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Prescription" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Patient_name" type="xs:string"></xs:element>
+<xs:element name="Patient_id" type="xs:integer"></xs:element>
+<xs:element name="Pre_date" type="xs:date"></xs:element>
+<xs:element name="Test_id" type="xs:string"></xs:element>
+<xs:element name="Patient_age" type="xs:integer"></xs:element>
+<xs:element name="Doctor_id" type="xs:string"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
 </xs:sequence>
 </xs:complexType>
 </xs:element>
@@ -40,6 +63,18 @@
 <xs:restriction base="xs:integer">
 <xs:minInclusive value="10000"></xs:minInclusive>
 <xs:maxInclusive value="100000"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Tprice">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="100"></xs:minInclusive>
+<xs:maxInclusive value="10000"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="myAge">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="10"></xs:minInclusive>
+<xs:maxInclusive value="100"></xs:maxInclusive>
 </xs:restriction>
 </xs:simpleType>
 </xs:schema>
