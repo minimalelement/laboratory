@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<ChristUniversity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="emp.xsd">
+  <Faculty>
+    <EMP_Name>Rithul</EMP_Name>
+    <EMP_experience>22</EMP_experience>
+    <EMP_address>Random address1</EMP_address>
+    <EMP_phone>+7534238766</EMP_phone>
+    <Salary>20000</Salary>
+  </Faculty>
+  <Faculty>
+    <EMP_Name>Pavan</EMP_Name>
+    <EMP_experience>21</EMP_experience>
+    <EMP_address>Random address2</EMP_address>
+    <EMP_phone>+7534448766</EMP_phone>
+    <Salary>25000</Salary>
+  </Faculty>
+  <Faculty>
+    <EMP_Name>John</EMP_Name>
+    <EMP_experience>2</EMP_experience>
+    <EMP_address>Random address3</EMP_address>
+    <EMP_phone>+9244238111</EMP_phone>
+    <Salary>30000</Salary>
+  </Faculty>
+  <Sample>
+  	<Collection_mode>Home</Collection_mode>
+  	<Sample_type>Blood</Sample_type>
+  	<Patient_id>PT22341</Patient_id>
+  	<Date>2021-09-24</Date>
+  	<Test_price>5300</Test_price>
+  </Sample>
+  <Sample>
+	<Collection_mode>Lab</Collection_mode>
+	<Sample_type>Blood</Sample_type>
+	<Patient_id>PT24441</Patient_id>
+	<Date>2021-02-04</Date>
+	<Test_price>1300</Test_price>
+  </Sample>
+  <Sample>
+  	<Collection_mode>Home</Collection_mode>
+  	<Sample_type>Urine</Sample_type>
+  	<Patient_id>PT22991</Patient_id>
+  	<Date>2021-11-21</Date>
+  	<Test_price>6000</Test_price>
+  </Sample>
+  <Lab_equipment>
+  <Equipment_id>WMR234551</Equipment_id>
+  <Equipment_validity>2035-11-02</Equipment_validity>
+  </Lab_equipment>
+  <Lab_equipment>
+  <Equipment_id>WMR454551</Equipment_id>
+  <Equipment_validity>2025-11-22</Equipment_validity>
+  </Lab_equipment>
+  <Lab_equipment>
+  <Equipment_id>CRR234551</Equipment_id>
+  <Equipment_validity>2045-09-02</Equipment_validity>
+  </Lab_equipment>
+</ChristUniversity>

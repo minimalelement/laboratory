@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ChristUniversity">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Faculty" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="EMP_name" type="xs:string"></xs:element>
+<xs:element name="EMP_experience" type="xs:string"></xs:element>
+<xs:element name="EMP_address" type="xs:string"></xs:element>
+<xs:element name="EMP_phone" type="xs:integer"></xs:element>
+<xs:element name="Salary" type="MySal"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Sample" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Collection_mode" type="xs:string"></xs:element>
+<xs:element name="Sample_type" type="xs:string"></xs:element>
+<xs:element name="Patient_id" type="xs:string"></xs:element>
+<xs:element name="Date" type="xs:date"></xs:element>
+<xs:element name="Test_Price" type="MySal"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Lab_equipment" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Equipment_id" type="xs:string"></xs:element>
+<xs:element name="Equipment_validity" type="xs:date"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:simpleType name="MySal">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="10000"></xs:minInclusive>
+<xs:maxInclusive value="100000"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
