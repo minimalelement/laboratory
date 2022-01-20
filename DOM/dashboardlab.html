@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="dashboard.css">
+    <script src = "labo.js" ></script>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <title>RenovationManiac</title>
+<body>
+  
+            <table  id='Faculty_info' class = 'Faculty_table' border="2">
+              <button  class="btn btn-primary" onclick = 'renovationXML()'>Show </button>
+ 
+              <button  class="btn btn-warning" onclick = "removeNodeElement()">Remove designtype</button>
+              <button class="btn btn-secondary" onclick = "changeNodeValue()">Change status</button>
+              <button  class="btn btn-success" onclick = "addNewElement()">Add new info</button>
+                     
+            </table>
+    
+    
+        
+    </div>
+  </div>
+</section>
+
+<script>
+ let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+sidebar.classList.toggle("active");
+if(sidebar.classList.contains("active")){
+sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+
+</body>
+</html>
+
