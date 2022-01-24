@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="test.xsl"?>
 <ChristUniversity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="emp.xsd">
+xsi:noNamespaceSchemaLocation="NewXMLSchema.xsd">
   <Faculty>
     <EMP_Name>Rithul</EMP_Name>
     <EMP_experience>22</EMP_experience>
@@ -34,7 +34,7 @@ xsi:noNamespaceSchemaLocation="emp.xsd">
     <EMP_experience>7</EMP_experience>
     <EMP_address>Random address4</EMP_address>
     <EMP_phone>+9124238766</EMP_phone>
-    <Salary>10000</Salary>
+    <Salary>11000</Salary>
   </Faculty>
     <Faculty>
     <EMP_Name>Navin</EMP_Name>
