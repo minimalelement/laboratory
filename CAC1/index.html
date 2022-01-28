@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="styles.css">
+
+  <script>
+
+    var span=document.getElementsByTagName("span");
+    
+    
+    function validate()
+                 { 
+                   
+        var a =  document.getElementById("name").value;
+        
+        
+         var b = document.getElementById("email").value;
+        
+         var c =document.getElementById("phone").value;
+        
+         var d = document.getElementById("pass").value;
+        
+        
+    
+        if((a == null || a == "") && (b == null || b == "") && (c == null || c == "") && (d == null || d == ""))
+       {             
+        
+    
+        span[1].innerText="Blank name";
+        document.getElementById("name").style.border="1.5px red solid";
+        span[2].innerText="Blank email";
+        document.getElementById("email").style.border="1.5px red solid";
+        span[3].innerText="Blank phone number";
+        document.getElementById("phone").style.border="1.5px red solid";
+        span[4].innerText="Blank password";
+        document.getElementById("pass").style.border="1.5px red solid";
+        scrollToTop()
+        
+        return false;   
+        
+    
+         }
+    else
+    allLetter();
+    validateEmail();
+    
+    password();
+    validatePhone(); 
+       
+    }
+    
+              
+                    function validateEmail() {
+                        
+                        var user = document.getElementById("email").value;
+                        var user2 = document.getElementById("email");
+                        var re = /^\w+([\.-]?\w+)*@christuniversity.in/;
+                        
+                      
+                        if (user == "") {
+                        span[2].innerText="Blank email***";
+                        user2.style.border="2.5px red solid";
+                        //alert("Email must be filled out");
+                        return false;
+                        }
+                    
+            
+                        if (re.test(user)) {
+                            span[2].innerText = 'Valid';
+                            
+                            user2.style.border="1px green solid";
+                
+    
+    
+                           
+                            password();
+                            return true;
+                        }
+                        else {
+    
+                            span[2].innerText="Incorrect Email id";
+                         user2.style.border="1px red solid";
+                           return false;
+                             }
+                    }
+            
+            
+            
+        function validatePhone() {
+             
+        var user = document.getElementById("phone").value;
+        var user2 = document.getElementById("phone");
+        var re = /^[7-9][0-9]{9}$/;
+    
+    
+        if (user == "") {
+                      
+                        
+                        span[3].innerText="Blank phone number***";
+                        user2.style.border="2px red solid";
+                        //alert("Email must be filled out");
+                        return false;
+                       
+                        } 
+              if (re.test(user) & user.length ==10) 
+              {
+                span[3].innerText = 'Valid';
+                            
+                 user2.style.border="1px green solid";
+                
+                  
+                  return true;
+                }
+    
+                
+              else {
+            
+                  user2.style.border = "red solid 2px";
+                  span[3].innerText="Phone no should be of 10 digits";
+                  
+                  return false;
+              } }
+    
+        function allLetter()
+        {
+        var user = document.getElementById("name").value;
+        var user2 = document.getElementById("name");
+        var re = /^[a-zA-Z ]*$/;
+        
+        if (user == "") {span[1].innerText="Blank name***";
+                        user2.style.border="2px red solid";
+                       
+                        return false;
+                        } 
+        if (re.test(user) ) {
+            span[1].innerText = 'Valid';
+                            
+                            user2.style.border="1px green solid";
+                
+                validateEmail();
+               
+            }
+        else {    
+                  user2.style.border = "red solid 2px";
+                  span[1].innerText="Name should contain only alphabets";
+                  return false;
+                
+            }
+    
+           
+           }
+        
+        
+     function  password()
+     { 
+        var user = document.getElementById("pass").value;
+        var user2 = document.getElementById("pass");
+        var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
+         if (user == "")
+         {
+
+            span[4].innerText="Blank password***";
+            user2.style.border="2px red solid";
+            return false;
+                        } 
+        else if (re.test(user))// && ( user.trim().length < 7 && user != "" ))
+         {   
+
+              if(  user.trim().length < 8 && user != "" )
+
+              {
+            span[4].innerText = 'Weak Password';
+            user2.style.border="5px green solid";
+              }
+
+              
+             
+            else if (user.trim().length >= 8 && user.trim().length <=15) {
+            span[4].innerText = 'Strong Password';
+            user2.style.border="5px green solid";
+            }
+            else{
+            span[4].innerText = 'Too long Password';
+            
+            } }
+         else {
+          
+                 user2.style.border = "red solid 2px";
+                 span[4].innerText="Invalid password***";
+                 user2.style.border="2px red solid";
+                 //alert("Password must contain : "+  "\n" + "1.minimum of 1 lower case letter [a-z]"+ "\n"  +"2. minimum of 1 upper case letter [A-Z]"+ "\n" +"3. minimum of 1 numeric character [0-9]" + "\n" + " 4.1 special character ");
+                 return false;
+             } 
+ }
+    
+
+
+
+
+
+
+
+
+    function display()
+    {
+        if (validate()=="true" &&   validatePhone()=="true" && password()=="true" && validateEmail())
+    {
+    alert("YOU HAVE SUCCESSFULLY REGISTERED")
+    }
+    
+    else
+      return false;
+    }
+          
+    function scrollToTop() {
+    window.scrollTo(4, 0);
+}
+          
+      
+
+function test(event)
+{
+    let code=event.which;
+    if(code>47&&code<58)
+   
+    return false;
+    else
+    return true;
+    
+}
+function test2(event)
+{
+    let code=event.which;
+    if(code>64&&code<91)
+   
+    return false;
+    else
+    return true;
+    
+}
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Feedback Form
+    </div>
+    <div class="form" >
+      
+      <div class="inputfield">
+    
+          <label>Name <br><input type="text" id=name onkeyup="allLetter()" onkeydown=" return test(event)" class="input" /><span style="color: black;"></span></label><br><br>
+          <label>Address<br><input type="text" class="input"></label>
+        </div><br><br>
+         
+    
+      <div class="inputfield">
+       
+          <label>Email<br><input type="email" id="email" onkeyup="validateEmail()"class="input"/><span style="color: black;"></span></label><br><br>
+          <label>Phone no<br><input type="text"id="phone" onkeyup="validatePhone()"onkeydown=" return test2(event)" class="input"/><span style="color: black;"></span></label><br><br>
+      </div><br><br>
+
+     
+          <div class="inputfield">
+           
+          <label >Password<input type="password"id="pass" class="input"onkeyup="password()" /><span style="color: black;"></span></label><br><br>
+         
+      </div><br><br>
+
+      <div><b>What do you like about college</b></div><br>
+      <div class="inner-wrap">
+          
+          <input type="checkbox" id="student" name="student" value="Student" style="margin-right: 10px;" >Student<br><br>
+        
+          <input type="checkbox" id="location" name="location" value="Location" style="margin-right: 10px;">Location<br><br>
+       
+          <input type="checkbox" id="campus" name="campus" value="Campus"style="margin-right: 10px;">Campus<br><br>
+    
+          <input type="checkbox" id="atmosphere" name="atmosphere" value="Atmosphere"style="margin-right: 10px;">Atmosphere<br><br>
+         
+          <input type="checkbox" id="dorm" name="dorm" value="Dorm-Rooms"style="margin-right: 10px;">Dorm-Rooms<br><br>
+       
+          <input type="checkbox" id="sports" name="sports" value="Sports"style="margin-right: 10px;">Sports<br><br>
+         
+ 
+      </div><br><br>
+      <div><b>How did you know about Christ University?</b></div><br>
+      <div class="inner-wrap">
+          <input type="radio" id="friends" name="know" value="friends"style="margin-right: 10px;">Friends<br><br>
+         
+          <input type="radio" id="tel" name="know" value="television"style="margin-right: 10px;">Television<br><br>
+         
+          <input type="radio" id="net" name="know" value="internet"style="margin-right: 10px;">Internet<br><br>
+         
+          <input type="radio" id="other" name="know" value="other"style="margin-right: 10px;">Other<br><br>
+        
+
+
+      </div><br><br>
+      <div><b>Comments</b></div><br>
+      <div class="inputfield">
+          
+           <textarea name="field2" style="height: 100px;width: 500px;"></textarea>
+      </div>
+      <div class="button-section" >
+          <input type="submit" name="signup" id="signup" class="form-submit" value="Submit" onclick="validate(); return false ;scrollToTop()" style="background-color: rgb(139, 139, 129) ;font-family:'Montserrat', sans-serif;" />
+
+          <input type="submit" name="signup" id="signup" class="form-submit" value="Reload" onclick="reload()"style="background-color: yellow;font-family:'Montserrat', sans-serif;"/>
+
+       
+    
+    
+      </div>
+
+    </div>
+  
+
+    </div>
+      
+</body>
+</html>
