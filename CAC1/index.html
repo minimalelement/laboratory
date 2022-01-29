@@ -29,13 +29,13 @@
        {             
         
     
-        span[1].innerText="Blank name";
+        span[0].innerText="Blank name";
         document.getElementById("name").style.border="1.5px red solid";
-        span[2].innerText="Blank email";
+        span[1].innerText="Blank email";
         document.getElementById("email").style.border="1.5px red solid";
-        span[3].innerText="Blank phone number";
+        span[2].innerText="Blank phone number";
         document.getElementById("phone").style.border="1.5px red solid";
-        span[4].innerText="Blank password";
+        span[3].innerText="Blank password";
         document.getElementById("pass").style.border="1.5px red solid";
         scrollToTop()
         
@@ -61,7 +61,7 @@
                         
                       
                         if (user == "") {
-                        span[2].innerText="Blank email***";
+                        span[1].innerText="Blank email***";
                         user2.style.border="2.5px red solid";
                         //alert("Email must be filled out");
                         return false;
@@ -69,7 +69,7 @@
                     
             
                         if (re.test(user)) {
-                            span[2].innerText = 'Valid';
+                            span[1].innerText = 'Valid';
                             
                             user2.style.border="1px green solid";
                 
@@ -81,7 +81,7 @@
                         }
                         else {
     
-                            span[2].innerText="Incorrect Email id";
+                            span[1].innerText="Incorrect Email id";
                          user2.style.border="1px red solid";
                            return false;
                              }
@@ -99,7 +99,7 @@
         if (user == "") {
                       
                         
-                        span[3].innerText="Blank phone number***";
+                        span[2].innerText="Blank phone number***";
                         user2.style.border="2px red solid";
                         //alert("Email must be filled out");
                         return false;
@@ -107,7 +107,7 @@
                         } 
               if (re.test(user) & user.length ==10) 
               {
-                span[3].innerText = 'Valid';
+                span[2].innerText = 'Valid';
                             
                  user2.style.border="1px green solid";
                 
@@ -119,7 +119,7 @@
               else {
             
                   user2.style.border = "red solid 2px";
-                  span[3].innerText="Phone no should be of 10 digits";
+                  span[2].innerText="Phone no should be of 10 digits";
                   
                   return false;
               } }
@@ -130,13 +130,13 @@
         var user2 = document.getElementById("name");
         var re = /^[a-zA-Z ]*$/;
         
-        if (user == "") {span[1].innerText="Blank name***";
+        if (user == "") {span[0].innerText="Blank name***";
                         user2.style.border="2px red solid";
                        
                         return false;
                         } 
         if (re.test(user) ) {
-            span[1].innerText = 'Valid';
+            span[0].innerText = 'Valid';
                             
                             user2.style.border="1px green solid";
                 
@@ -145,7 +145,7 @@
             }
         else {    
                   user2.style.border = "red solid 2px";
-                  span[1].innerText="Name should contain only alphabets";
+                  span[0].innerText="Name should contain only alphabets";
                   return false;
                 
             }
@@ -162,7 +162,7 @@
          if (user == "")
          {
 
-            span[4].innerText="Blank password***";
+            span[3].innerText="Blank password***";
             user2.style.border="2px red solid";
             return false;
                         } 
@@ -172,24 +172,24 @@
               if(  user.trim().length < 8 && user != "" )
 
               {
-            span[4].innerText = 'Weak Password';
+            span[3].innerText = 'Weak Password';
             user2.style.border="5px green solid";
               }
 
               
              
             else if (user.trim().length >= 8 && user.trim().length <=15) {
-            span[4].innerText = 'Strong Password';
+            span[3].innerText = 'Strong Password';
             user2.style.border="5px green solid";
             }
             else{
-            span[4].innerText = 'Too long Password';
+            span[3].innerText = 'Too long Password';
             
             } }
          else {
           
                  user2.style.border = "red solid 2px";
-                 span[4].innerText="Invalid password***";
+                 span[3].innerText="Invalid password***";
                  user2.style.border="2px red solid";
                  //alert("Password must contain : "+  "\n" + "1.minimum of 1 lower case letter [a-z]"+ "\n"  +"2. minimum of 1 upper case letter [A-Z]"+ "\n" +"3. minimum of 1 numeric character [0-9]" + "\n" + " 4.1 special character ");
                  return false;
