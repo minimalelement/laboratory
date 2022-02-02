@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="sample">
+<!---<html ng-app="sample2"> --->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="labemp.js"></script>
+</head>
+
+<body ng-controller="myctrl">
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>ID
+                <br>
+                <input type="text" ng-model="search.ID">
+            </th>
+            <th>Name
+                <br>
+                <input type="text" ng-model="search.Name">
+            </th>
+                <th>Experience
+                <br>
+                <input type="text" ng-model="search.Experience">
+            </th>
+            <th>Address
+                <br>
+                <input type="text" ng-model="search.Address">
+            </th>
+            <th>Phone
+                <br>
+                <input type="text" ng-model="search.Phone">
+            </th>
+            <th>Salary
+                <br>
+                <input type="text" ng-model="search.Salary">
+            </th>
+        </tr>
+        <tr ng-repeat="item in entry|filter:search|orderBy:'Name'">
+            <td>{{item.ID}}</td>
+            <td>{{item.Name|uppercase}}</td>
+            <td>{{item.Experience|orderBy:"Experience"}}</td>
+            <td>{{item.Address|lowercase}}</td>
+            <td>{{item.Phone}}</td>
+            <td>{{item.Salary|currency}}</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Patient_ID
+                <br>
+                <input type="text" ng-model="search.Patient_Name">
+            </th>
+            <th>Patient name
+                <br>
+                <input type="text" ng-model="search.Patient_ID">
+            </th>
+                <th>Prescription date
+                <br>
+                <input type="text" ng-model="search.Pres_Date">
+            </th>
+            <th>Test id
+                <br>
+                <input type="text" ng-model="search.Test_ID">
+            </th>
+        </tr>
+        <tr ng-repeat="item in entry|filter:search">
+            <td>{{item.Patient_ID}}</td>
+            <td>{{item.Patient_Name}}</td>
+            <td>{{item.Pres_Date|date}}</td>
+            <td>{{item.Test_ID}}</td>
+        </tr>
+    </table>
+</body>
+
+</html>
