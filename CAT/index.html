@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fb1.css">
+
+    <title>Gateways 2022 | Christ</title>
+
+<body style="background-image: url('bg.jpg'); background-size: cover;">
+
+    <div class="container">
+        <div class="header">
+            <h2>TECHNOVID REGISTRATION</h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Name:</label>
+                <input type="text" onkeypress="return  lockkb(event)" placeholder="enter name" id="username" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Phone Number:</label>
+                <input type="text"
+                    onkeypress="return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));"
+                    placeholder="Enter phone" id="phone" oninput="return validatephone()" />
+                </script>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Email:</label>
+                <input type="email" placeholder="enter email" id="email" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Password:</label>
+                <input type="password" onkeyup="checkPassword()" placeholder="enter password" id="password" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Age :</label>
+                <input type="number" min="0" id="Price" name= "Price" onkeypress="return event.charCode >= 48" min="1" placeholder="enter age"
+                    id="age"/>
+                <small>Error message</small><br>
+            </div>
+            <button onclick="addCookie();"> Submit</button>
+            <button onClick="window.location.reload();">Reset</button>
+        </form>
+    </div>
+    </div>
+    <script src="fb3.js"></script>
+    <script>
+        function addCookie() {
+            var email2 = document.getElementById('email').value
+            var number2 = document.getElementById('phone').value
+            localStorage.setItem('Email', email2)
+            localStorage.setItem('phone number', number2)
+        }
+    </script>
+</body>
+
+</html>
+
+<!--
+    name
+    phone num
+    password
+    officil email
+    age
+    first letter capital in username
+    local storage phone and email
+-->

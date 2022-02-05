@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="form.xsl"?>
+<CHRIST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="form.xsd">
+  <COMPUTER-SCIENCE>
+    <STU-NAME>Forlan</STU-NAME>
+    <STU-UNIVERSITY>Christ university</STU-UNIVERSITY>
+    <STU-PHONE>7544418629</STU-PHONE>
+    <STU-EMAIL>diegofor21@christuniversity.in</STU-EMAIL>
+  </COMPUTER-SCIENCE>
+  <COMPUTER-SCIENCE>
+    <STU-NAME>Rooney</STU-NAME>
+    <STU-UNIVERSITY>Christ university</STU-UNIVERSITY>
+    <STU-PHONE>7577765429</STU-PHONE>
+    <STU-EMAIL>wayneroo10@christuniversity.in</STU-EMAIL>
+  </COMPUTER-SCIENCE>
+  <COMPUTER-SCIENCE>
+    <STU-NAME>Messi</STU-NAME>
+    <STU-UNIVERSITY>Christ university</STU-UNIVERSITY>
+    <STU-PHONE>9987711117</STU-PHONE>
+    <STU-EMAIL>messileo10@christuniversity.in</STU-EMAIL>
+  </COMPUTER-SCIENCE>
+</CHRIST>
