@@ -1,0 +1,47 @@
+angular.module('myapp',['ngRoute'])
+.config(function($routeProvider)
+{
+    $routeProvider.when('/home',
+    {
+        templateUrl:'Lab/home.html',
+        controller:'homectrl'}).when('/home/:first/:last',
+        {
+            templateUrl:'Lab/home.html',
+            controller:'homectrl'
+    }).when('/course',
+    {
+        templateUrl:'Lab/sample.html',
+        controller:'coursectrl'
+    }).when('/student',
+    {
+        templateUrl:'Lab/test.html',
+        controller:'studentctrl'
+    })
+})
+.controller('myctrl',function()
+{
+
+})
+.controller("homectrl",function($scope,$routeParams)
+{
+    $scope.message="Home Page"
+    if($routeParams.first&&$routeParams.last)
+    {
+        $scope.person={
+            first:$routeParams.first,
+            last:$routeParams.last
+        };
+    }
+})
+.controller("coursectrl",function($scope)
+{
+   $scope.courses=["BLOOD","URINE","SALIVA","ORAL FLUID","SWEAT","SPUTUM"]; 
+})
+.controller("studentctrl",function($scope,$http)
+{
+    $http.get('data.json')
+    .success(function(response)
+    {
+        $scope.data=response.records;
+    });
+});

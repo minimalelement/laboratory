@@ -1,0 +1,11 @@
+{"data":[
+    {"ID":1, "Name":"Naveen", "Experience":"12", "Address": "Addresslane1", "Gender": 1, "Phone": 9234776512, "Salary": 18000},
+    {"ID":2, "Name":"Kiran", "Experience":"7",  "Address": "Addresslane2", "Gender": 1, "Phone": 9877530087, "Salary":8000},
+    {"ID":3, "Name":"Abu", "Experience":"10", "Address": "Addresslane3", "Gender": 1, "Phone": 9722465589, "Salary": 15000},
+    {"ID":4, "Name":"Adith", "Experience":"4",  "Address": "Addresslane4", "Gender": 2, "Phone": 9145667822, "Salary": 2000},
+    {"ID":5, "Name":"Abhi", "Experience":"6",  "Address": "Addresslane5", "Gender": 1, "Phone": 9066775422, "Salary": 7500},
+    {"ID":6, "Name":"Sidharth", "Experience":"8",  "Address": "Addresslane6", "Gender": 2, "Phone": 9122345555, "Salary": 9000},
+    {"ID":7, "Name":"Johnny", "Experience":"8",  "Address": "Addresslane7", "Gender": 3, "Phone": 9847334322, "Salary": 8700}  
+]}
+
+
